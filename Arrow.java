@@ -65,7 +65,6 @@ public class Arrow extends GameObject {
     }
 
     public static float calculateArrowAngle(float startX, float startY, float targetX, float targetY, float speed) {
-        final float GRAVITY = 800f;
         float dx = targetX - startX;
         float dy = targetY - startY;
 
@@ -80,6 +79,12 @@ public class Arrow extends GameObject {
             }
         }
 
+        float angleRad = getAngleRad(speed, dx, dy);
+
+        return (float) Math.toDegrees(angleRad);
+    }
+
+    private static float getAngleRad(float speed, float dx, float dy) {
         float A = (GRAVITY * dx * dx) / (2 * speed * speed);
         float discriminant = dx * dx - 4 * A * (A - dy);
 
@@ -95,8 +100,6 @@ public class Arrow extends GameObject {
 
         float cosTheta = Math.signum(dx) / (float) Math.sqrt(1 + u * u);
         float sinTheta = u * cosTheta;
-        float angleRad = (float) Math.atan2(sinTheta, cosTheta);
-
-        return (float) Math.toDegrees(angleRad);
+        return (float) Math.atan2(sinTheta, cosTheta);
     }
 }
