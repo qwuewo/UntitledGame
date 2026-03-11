@@ -17,6 +17,7 @@ public class GameObject implements Cloneable, Icon {
     protected float lastAttackTime;
     protected int fraction;
     protected boolean isAlive = true;
+    protected Engine engine = Engine.getInstance();
 
     public GameObject() {
         id = -1;
