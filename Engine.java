@@ -88,10 +88,17 @@ public class Engine {
                 // копия объекта создаётся
                 GameObject newObject = new GameObject(
                         -1,
+ feature/engine-class
                         elem.getX(),
                         elem.getY(),
                         100,
                         elem.getSpeed()
+
+                    elem.getX(),
+                    elem.getY(),
+                    100,
+                    elem.getSpeed()
+ main
                 );
 
                 // она добавляется в список
@@ -166,4 +173,8 @@ public class Engine {
     }
 
     public float getGameTime() { return gameTime; }
+ feature/engine-class
 }
+
+}
+ main
