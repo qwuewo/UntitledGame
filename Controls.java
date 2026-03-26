@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Controls extends JPanel {
+
     public Controls(Engine engine) {
         setLayout(new FlowLayout());
 
@@ -9,13 +10,11 @@ public class Controls extends JPanel {
             System.out.println("spawn Base");
             // under construction
         }));
-
         add(new Button("Spawn Archer", new UnitArcher(), () -> { // Добавил
             UnitArcher archer = new UnitArcher(1, 50, 800, 50, 500);
             archer.setFraction(1);
             archer.setAttackRange(100);
             archer.setAttackDamage(0);
-            archer.setAttackCooldown(9999.0f);
             engine.spawnObject(archer);
             System.out.println("Archer spawned - will stop and stand");
         }));
@@ -25,3 +24,4 @@ public class Controls extends JPanel {
         }));
     }
 }
+
