@@ -10,7 +10,6 @@ public class Tower extends GameObject {
     private float lifetime = 10.0f;
 
 
-
     public Tower(int id, float x, float y, int size, float speed) {
         super(id, x, y, size, speed);
         this.spawnTime = Engine.getInstance().getGameTime();
