@@ -25,6 +25,7 @@ public class GameObject implements Cloneable, Icon {
     protected float lastAttackTime;
     protected int fraction;
     protected boolean isAlive = true;
+    protected int direction = 1;
     protected Engine engine = Engine.getInstance();
 
     /**
@@ -286,6 +287,13 @@ public class GameObject implements Cloneable, Icon {
         isAlive = alive;
     }
 
+    public int getDirection() {
+        return direction;
+    }
+
+    public void setDirection(int direction) {
+        this.direction = direction;
+    }
 
     /**
      * Проверка на равенство объектов.

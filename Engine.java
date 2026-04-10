@@ -31,8 +31,6 @@ public class Engine {
             spawnEnemyMob();
             enemySpawnTimer = 0f;
         }
-        checkArrowTowerCollisions();
-        cleanupDeadObjects();
         this.deltaTime = deltaTime;
         gameTime += deltaTime;
         for (int i = 0; i < objects.size(); i++) {
